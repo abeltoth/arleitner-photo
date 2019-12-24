@@ -1,1 +1,17 @@
-<p>home-page works!</p>
+<!-- <app-navbar></app-navbar> -->
+
+<button class="menu-icon" mat-icon-button>
+  <mat-icon>more_vert</mat-icon>
+</button>
+
+<ngb-carousel *ngIf="carouselImageSources.length > 0" class="carousel-main">
+  <ng-template ngbSlide *ngFor="let imgSrc of carouselImageSources">
+    <div class="carousel-img-wrapper">
+      <img [src]="imgSrc" alt="slide" class="carousel-img">
+    </div>
+    <div class="carousel-caption">
+      <h3>Arleitner</h3>
+      <p>Photography</p>
+    </div>
+  </ng-template>
+</ngb-carousel>

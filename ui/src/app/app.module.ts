@@ -11,6 +11,8 @@ import { HomeModule } from './pages/home/home.module';
 import { ShellComponent } from './components/shell/shell.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -20,7 +22,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     ShellComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     HomeModule,
     NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
