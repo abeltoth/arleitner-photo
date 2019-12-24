@@ -1,0 +1,30 @@
+$white: #FFFFFF;
+$grey: #F8F8F8;
+
+$fontOpenSans: 'Open Sans', sans-serif;
+$fontPlutoMedium: PlutoMedium, sans-serif;
+$fontPlutoSansLight: PlutoSansLight, sans-serif;
+
+//
+// Mixins
+//
+@mixin page-layout {
+  :host {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas: "pageHeader"
+    "pageBody";
+    height: 100vh;
+    overflow-y: auto;
+    background-color: $grey;
+  }
+
+  .page-header {
+    grid-area: pageHeader;
+  }
+
+  .page-body {
+    grid-area: pageBody;
+    position: relative;
+  }
+}

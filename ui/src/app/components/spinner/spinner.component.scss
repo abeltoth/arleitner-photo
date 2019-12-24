@@ -1,0 +1,15 @@
+@import "~src/variables";
+
+.transparent-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba($grey, 0.1);
+  display: grid;
+  align-items: end;
+  justify-items: end;
+  padding: 0 30px 30px 0;
+  z-index: 100;
+}
