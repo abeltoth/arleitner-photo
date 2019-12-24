@@ -1,6 +1,6 @@
 import { AuthGuard } from './guards/auth.guard';
-import { HomePageComponent } from './pages/home/home-page/home-page.component';
-import { ShellComponent } from './components/shell/shell.component';
+import { HomePageComponent } from './home/home/home-page/home-page.component';
+import { ShellComponent } from './shared/shell/shell.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -18,7 +18,7 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        loadChildren: () => import('./pages/home/home.module').then(mod => mod.HomeModule)
+        loadChildren: () => import('./home/home/home.module').then(mod => mod.HomeModule)
       },
     ]
   },

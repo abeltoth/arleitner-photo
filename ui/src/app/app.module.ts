@@ -7,12 +7,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HomeModule } from './pages/home/home.module';
-import { ShellComponent } from './components/shell/shell.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
+import { HomeModule } from './home/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { SharedModule } from './shared/shared.module';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -21,9 +18,6 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    ShellComponent,
-    SpinnerComponent,
-    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -37,11 +31,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     AppRoutingModule,
     ReactiveFormsModule,
-    HomeModule,
-    NgxSpinnerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule,
+    HomeModule
   ],
-  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
