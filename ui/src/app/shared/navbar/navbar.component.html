@@ -1,4 +1,5 @@
-<mat-toolbar *ngIf="menuVisible" id="desktop-menu">
+<mat-toolbar *ngIf="menuVisible" id="desktop-menu" [@inOutDesktopAnimation]>
+  <img src="/assets/images/logo.png" alt="logo" class="desktop-logo navbar-item">
   <span class="navbar-item">{{ 'component.navbar.home' | translate }}</span>
   <span class="navbar-item">{{ 'component.navbar.wedding' | translate }}</span>
   <span class="navbar-item">{{ 'component.navbar.portrait' | translate }}</span>
@@ -6,11 +7,14 @@
   <span class="navbar-item">{{ 'component.navbar.contact' | translate }}</span>
 
   <button class="menu-icon" mat-icon-button>
-    <mat-icon>more_vert</mat-icon>
+    <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>
 
-<mat-toolbar *ngIf="menuVisible" id="mobile-menu">
+<mat-toolbar *ngIf="menuVisible" id="mobile-menu" [@inOutMobileAnimation]>
+  <mat-toolbar-row class="logo-container">
+    <img src="/assets/images/logo.png" alt="logo" class="mobile-logo">
+  </mat-toolbar-row>
   <mat-toolbar-row>
     <span class="navbar-item">{{ 'component.navbar.home' | translate }}</span>
   </mat-toolbar-row>
@@ -28,6 +32,6 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<button class="menu-icon" mat-icon-button (click)="menuVisible = !menuVisible">
-  <mat-icon>more_vert</mat-icon>
+<button class="menu-icon" [class.menu-icon-dark]="menuVisible" mat-icon-button (click)="menuVisible = !menuVisible">
+  <mat-icon>menu</mat-icon>
 </button>

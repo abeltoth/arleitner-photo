@@ -5,7 +5,7 @@
 }
 
 .navbar-item {
-  margin-right: 30px;
+  margin: auto;
 }
 
 .menu-icon {
@@ -17,6 +17,23 @@
   cursor: pointer;
 }
 
+.menu-icon-dark {
+  color: $textBlack;
+}
+
+.logo-container {
+  height: 90px;
+}
+
+.desktop-logo {
+  height: 90px;
+}
+
+.mobile-logo {
+  height: 90px;
+  margin: auto;
+}
+
 @media (min-width: 992px) {
   #desktop-menu {
     display: flex;
@@ -26,4 +43,7 @@
     display: none;
   }
 
+  .navbar-item {
+    margin: 0 30px 0 0;
+  }
 }
