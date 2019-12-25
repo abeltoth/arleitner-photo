@@ -1,1 +1,33 @@
-<p>navbar works!</p>
+<mat-toolbar *ngIf="menuVisible" id="desktop-menu">
+  <span class="navbar-item">{{ 'component.navbar.home' | translate }}</span>
+  <span class="navbar-item">{{ 'component.navbar.wedding' | translate }}</span>
+  <span class="navbar-item">{{ 'component.navbar.portrait' | translate }}</span>
+  <span class="navbar-item">{{ 'component.navbar.gallery' | translate }}</span>
+  <span class="navbar-item">{{ 'component.navbar.contact' | translate }}</span>
+
+  <button class="menu-icon" mat-icon-button>
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-toolbar *ngIf="menuVisible" id="mobile-menu">
+  <mat-toolbar-row>
+    <span class="navbar-item">{{ 'component.navbar.home' | translate }}</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <span class="navbar-item">{{ 'component.navbar.wedding' | translate }}</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <span class="navbar-item">{{ 'component.navbar.portrait' | translate }}</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <span class="navbar-item">{{ 'component.navbar.gallery' | translate }}</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <span class="navbar-item">{{ 'component.navbar.contact' | translate }}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<button class="menu-icon" mat-icon-button (click)="menuVisible = !menuVisible">
+  <mat-icon>more_vert</mat-icon>
+</button>

@@ -1,5 +1,9 @@
 {
-  "key": "value",
+  "component.navbar.home": "Kezdőoldal",
+  "component.navbar.wedding": "Esküvő",
+  "component.navbar.portrait": "Portré",
+  "component.navbar.gallery": "Galéria",
+  "component.navbar.contact": "Kapcsolat",
 
   "": ""
 }
